@@ -12,6 +12,9 @@ const Invitation = () => {
     hidden: { opacity: 0, y: 100 },
     visual: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
   };
+  const popAlert = () => {
+    alert('Hey hey...Not yet!!!!!');
+  };
   return (
     <Wrapper>
       <motion.div
@@ -103,7 +106,11 @@ const Invitation = () => {
           viewport={{ once: true }}
         >
           <h1 className='title'>Wedding photos</h1>
-          <p className='info'>To Be Added</p>
+          <div className='info'>
+            <button className='btn add' onClick={popAlert}>
+              To Be Added
+            </button>
+          </div>
         </motion.div>
       </motion.div>
     </Wrapper>
@@ -180,6 +187,8 @@ const Wrapper = styled.div`
     line-height: 1.8;
     margin-top: 1.5rem;
     color: #333;
+    display: grid;
+    justify-content: center;
   }
   .gallery {
     grid-row: 3/4;
@@ -204,7 +213,9 @@ const Wrapper = styled.div`
     text-shadow: 0px 1px 0px #283966;
     background: linear-gradient(rgb(120, 146, 194), #476e9e);
   }
-
+  .add {
+    width: 9rem;
+  }
   .btn:hover {
     background: linear-gradient(#476e9e, rgb(120, 146, 194));
   }
@@ -221,6 +232,9 @@ const Wrapper = styled.div`
       width: 5.5rem;
       height: 2rem;
       margin-top: 0.5rem;
+    }
+    .add {
+      width: 8rem;
     }
   }
   @media (max-width: 1100px) {
@@ -242,6 +256,9 @@ const Wrapper = styled.div`
       font-size: 0.9rem;
       width: 5rem;
       height: 1.8rem;
+    }
+    .add {
+      width: 7rem;
     }
   }
   @media (max-width: 857px) {

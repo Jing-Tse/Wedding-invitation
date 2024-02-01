@@ -155,7 +155,7 @@ const Wrapper = styled.div`
   }
   .container {
     grid-area: 1/1/2/2;
-    background-image: url('../src/assets/images/hero.jpg');
+    background-image: url('assets/images/hero.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;

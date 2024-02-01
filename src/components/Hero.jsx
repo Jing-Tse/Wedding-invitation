@@ -31,11 +31,11 @@ const Hero = () => {
       { delay: stagger(0.1, { startDelay: 3.5 }), duration: 1.5 }
     );
   }, [isInView]);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   const letterVariant = {
     hidden: { opacity: 0, y: -30 },
   };

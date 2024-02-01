@@ -9,7 +9,7 @@ import {
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/images/wedding logo.png';
-
+import hero from '../assets/images/hero.jpg';
 const Hero = () => {
   const dropVariant = {
     hidden: { opacity: 0, y: -50 },
@@ -73,14 +73,17 @@ const Hero = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <motion.div
-        className='container'
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 1, delay: 2.2, ease: 'easeIn' },
-        }}
-      >
+      <div className='container'>
+        <motion.img
+          src={hero}
+          alt='hero picture'
+          className='hero'
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1, delay: 2.2, ease: 'easeIn' },
+          }}
+        />
         <div className='content'>
           <motion.p
             className='title'
@@ -135,7 +138,7 @@ const Hero = () => {
             </motion.p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Wrapper>
   );
 };
@@ -151,22 +154,27 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
-  .logo {
-  }
   .container {
     grid-area: 1/1/2/2;
-    background-image: url('assets/images/hero.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     color: #638889;
     align-content: center;
+    height: 100vh;
+  }
+  .hero {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
   }
   .content {
+    grid-row: 1/2;
     grid-column: 2/3;
     justify-self: center;
+    align-self: center;
     display: grid;
     grid-template-rows: min-content max-content min-content;
     row-gap: 8vh;

@@ -12,8 +12,11 @@ const Invitation = () => {
     hidden: { opacity: 0, y: 100 },
     visual: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
   };
-  const popAlert = () => {
+  const addPhotoAlert = () => {
     alert('Hey hey...Not yet!!!!!');
+  };
+  const textAlert = () => {
+    alert('Please text Jing or Sebastian!!');
   };
   return (
     <Wrapper>
@@ -78,12 +81,9 @@ const Invitation = () => {
             <p>Saturday</p>
             <p>4:ooPM</p>
           </div>
-          <a
-            href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTgHnmrzNDzctNqlTfCCfmsxLJGtspWnQhjHbzQNflPRZpLgHXmgrDDkdQFhcgklllJxB'
-            className='btn'
-          >
+          <button className='btn' onClick={textAlert}>
             RSVP
-          </a>
+          </button>
         </motion.div>
         <div className='imgContainer3'>
           <div className='container'>
@@ -107,7 +107,7 @@ const Invitation = () => {
         >
           <h1 className='title'>Wedding photos</h1>
           <div className='info'>
-            <button className='btn add' onClick={popAlert}>
+            <button className='btn add' onClick={addPhotoAlert}>
               To Be Added
             </button>
           </div>

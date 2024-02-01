@@ -8,7 +8,7 @@ import {
 } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import logo from '../assets/images/wedding logo.png';
+import logo from '../assets/images/logo.png';
 import hero from '../assets/images/hero.jpg';
 const Hero = () => {
   const dropVariant = {
@@ -62,7 +62,7 @@ const Hero = () => {
               key='logo'
               initial={{ scale: 0.5 }}
               animate={{
-                scale: 1,
+                scale: 0.8,
                 transition: { duration: 1, ease: 'linear' },
               }}
               exit={{
@@ -145,13 +145,13 @@ const Hero = () => {
 const Wrapper = styled.div`
   display: grid;
   .opening {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(246, 246, 246);
     height: 100%;
     width: 100%;
     grid-area: 1/1/2/2;
     z-index: 1;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
     align-items: center;
   }
   .container {
@@ -226,6 +226,7 @@ const Wrapper = styled.div`
       font-size: 1.25rem;
     }
   }
+
   @media (max-width: 430px) {
     .content {
       margin-left: -35px;

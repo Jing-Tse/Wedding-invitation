@@ -144,18 +144,15 @@ const Hero = () => {
 };
 const Wrapper = styled.div`
   display: grid;
-  height: 100vh;
-  width: 100vw;
   .opening {
+    background-color: rgb(246, 245, 244);
     height: 100%;
     width: 100%;
-    background-color: rgb(246, 245, 244);
     grid-area: 1/1/2/2;
     z-index: 1;
     display: grid;
     justify-items: center;
     align-items: center;
-    overflow-x: hidden;
   }
   .container {
     grid-area: 1/1/2/2;

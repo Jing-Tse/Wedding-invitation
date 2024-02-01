@@ -31,11 +31,11 @@ const Hero = () => {
       { delay: stagger(0.1, { startDelay: 3.5 }), duration: 1.5 }
     );
   }, [isInView]);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  // }, []);
   const letterVariant = {
     hidden: { opacity: 0, y: -30 },
   };
@@ -144,15 +144,18 @@ const Hero = () => {
 };
 const Wrapper = styled.div`
   display: grid;
+  height: 100vh;
+  width: 100vw;
   .opening {
-    background-color: rgb(246, 245, 244);
     height: 100%;
     width: 100%;
+    background-color: rgb(246, 245, 244);
     grid-area: 1/1/2/2;
     z-index: 1;
     display: grid;
     justify-items: center;
     align-items: center;
+    overflow-x: hidden;
   }
   .container {
     grid-area: 1/1/2/2;
@@ -228,8 +231,8 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 430px) {
-    .opening {
-      text-align: center;
+    .logo {
+      translate: -13px;
     }
     .content {
       margin-left: -35px;

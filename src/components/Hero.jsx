@@ -19,8 +19,8 @@ const Hero = () => {
     hidden: { opacity: 0, y: -50 },
     visual: { opacity: 1, y: 0, transition: { duration: 1, delay: 5 } },
   };
-  const name1 = 'Sebastian';
-  const name2 = 'Jing';
+  const name1 = 'Jing';
+  const name2 = 'Sebastian';
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
   const [loading, setIsLoading] = useState(true);
@@ -145,7 +145,7 @@ const Hero = () => {
 const Wrapper = styled.div`
   display: grid;
   .opening {
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(246, 245, 244);
     height: 100%;
     width: 100%;
     grid-area: 1/1/2/2;
@@ -228,6 +228,9 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 430px) {
+    .opening {
+      text-align: center;
+    }
     .content {
       margin-left: -35px;
     }
